@@ -1,18 +1,122 @@
-12
-2
-1
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的個人網站 | My Portfolio</title>
+    <style>
+        /* 基礎樣式設定 */
+        :root {
+            --primary-color: #2d3436;
+            --accent-color: #0984e3;
+            --bg-color: #f5f6fa;
+            --text-color: #2d3436;
+        }
 
+        body {
+            font-family: 'Segoe UI', Microsoft JhengHei, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
 
+        /* 導航欄 */
+        nav {
+            background: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
 
+        .logo { font-weight: bold; font-size: 1.5rem; color: var(--accent-color); }
 
-1
-2
-2
-12
-1
-2
-21
-2112
-21
-21
-2
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { text-decoration: none; color: var(--text-color); font-weight: 500; }
+
+        /* 首屏區塊 */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: white;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; color: #636e72; }
+
+        /* 內容區塊 */
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        
+        section { margin-bottom: 60px; }
+        h2 { border-left: 5px solid var(--accent-color); padding-left: 15px; margin-bottom: 25px; }
+
+        /* 作品集卡片 */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+
+        /* 頁腳 */
+        footer { text-align: center; padding: 40px; background: #dfe6e9; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">NAME.</div>
+        <ul>
+            <li><a href="#about">關於</a></li>
+            <li><a href="#projects">作品</a></li>
+            <li><a href="#contact">聯絡</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>你好，我是 [你的名字]</h1>
+        <p>一名 熱愛創造 的 [你的職稱/身份]</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>關於我</h2>
+            <p>在這裡寫下你的簡介。例如：我擁有三年的設計經驗，擅長解決複雜的使用者問題，並將其轉化為簡潔美觀的界面。</p>
+        </section>
+
+        <section id="projects">
+            <h2>精選作品</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>專案名稱 A</h3>
+                    <p>簡短描述這個專案的亮點與你使用的技術棧。</p>
+                </div>
+                <div class="card">
+                    <h3>專案名稱 B</h3>
+                    <p>另一個引以為傲的作品，點擊這裡了解更多細節。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>聯絡資訊</h2>
+            <p>📧 Email: yourname@example.com</p>
+            <p>🔗 LinkedIn: /in/yourprofile</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2024 [你的名字] - 版權所有</p>
+    </footer>
+
+</body>
+</html>
